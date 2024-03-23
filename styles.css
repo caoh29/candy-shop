@@ -141,7 +141,7 @@ input[type="submit"]:hover {
 }
 
 .explore {
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,12 +206,17 @@ input[type="submit"]:hover {
 }
 
 .album ul figure img {
-  min-width: 300px;
+  min-width: 200px;
   max-width: 500px;
 }
 
+.album a {
+  text-decoration: none;
+  color: #ffc8dd;
+}
+
 #contact {
-  height: 70vh;
+  height: 78vh;
   padding: 20px;
   background-image: linear-gradient(#cdb4db, #ffc8dd);
   display: flex;
@@ -243,6 +248,54 @@ input[type="submit"]:hover {
   transform: scale(1.1);
 }
 
+.product {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: black;
+  color: white;
+}
+
+.portfolio {
+  padding: 2rem;
+}
+
+.portfolio ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.portfolio ul li {
+  display: none;
+}
+
+.portfolio ul li:first-child {
+  display: block;
+  align-self: center;
+}
+
+.portfolio ul li figure{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio img {
+  max-width: 300px;
+}
+
+.side-menu {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 2rem;
+}
+
+
 .logo {
   padding: 5px;
   width: 50px;
@@ -254,11 +307,59 @@ input[type="submit"]:hover {
   .post {
     padding: 15vh 30vw;
   }
+
+  .product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color: black;
+    color: white;
+  }
+  
+  .portfolio {
+    grid-column: 1 / span 2;
+  }
+  
+  .portfolio ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .portfolio ul li {
+    display: block;
+  }
+  
+  .portfolio ul li:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .portfolio ul li:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .portfolio ul li:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .portfolio ul li:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .portfolio img {
+    min-width: 300px;
+    max-width: 400px;
+  }
 }
 
-@media all and (min-width: 1280px) {
-  .explore {
-    background-position-y: 25%;
+@media screen and (min-width: 1024px) {
+  .post {
+    padding: 15vh 30vw;
   }
 }
 
